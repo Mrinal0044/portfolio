@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>K Mrinal | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fira+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-right">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <div class="hero-greeting">HELLO, IT'S ME!!</div>
+        <div class="hero-name">K Mrinal</div>
+        <div class="hero-typewriter">
+          <span id="typewriter"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+  // Typewriter effect for hero section
+  const roles = ["ML Engineer", "Data Science Enthusiast", "Tech Explorer"];
+  let roleIndex = 0, charIndex = 0, typing = true;
+  const typewriter = document.getElementById('typewriter');
+  function type() {
+    if (typing) {
+      if (charIndex < roles[roleIndex].length) {
+        typewriter.textContent += roles[roleIndex][charIndex++];
+        setTimeout(type, 90);
+      } else {
+        typing = false;
+        setTimeout(type, 1200);
+      }
+    } else {
+      if (charIndex > 0) {
+        typewriter.textContent = roles[roleIndex].substring(0, --charIndex);
+        setTimeout(type, 40);
+      } else {
+        typing = true;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(type, 400);
+      }
+    }
+  }
+  type();
+  </script>
+
+  <header>
+  </header>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>Programming Languages: Python, Java, C, C++, R</li>
+      <li>Tools: Github, VS Code, Tableau, Power BI</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Certifications and Achievements</h2>
+    <ul>
+      <li>Programming Languages: Python, Java, C, C++, R</li>
+      <li>Tools: Github, VS Code, Tableau, Power BI</li>
+      <li>Udemy- Full Stack Web Development <a href="https://www.udemy.com/certificate/UC-d25ebc74-45ff-48a5-ada4-973bd79c0d9f/">(Certificate)</a></li>
+    <li>Spoken Tutorial (From IIT Bombay) – Programming in Python, C, C++ </li> 
+        <li>Participated in a national level hackathon (HACKRONYX held at SVPCET Nagpur) where our team was selected out of 3800+ people that participated. <a href="https://ibb.co/rfRdHrvQ">certification </li>
+    </ul>
+  </section>
+
+  <section class="academics">
+    <h2 class="academics-title">Academic Background</h2>
+    <div class="academics-cards">
+      <div class="academics-card">
+        <div class="academics-score">8.77</div>
+        <div class="academics-label">B.Tech. CSE (Data Science)</div>
+        <div class="academics-detail">Vellore Institute of Technology,<br>Chennai | 2023-2027</div>
+      </div>
+      <div class="academics-card">
+        <div class="academics-score">91.7%</div>
+        <div class="academics-label">Class XII</div>
+        <div class="academics-detail">Krishna Public School, Raipur | 2023<br>(CBSE)</div>
+      </div>
+      <div class="academics-card">
+        <div class="academics-score">95.5%</div>
+        <div class="academics-label">Class X</div>
+        <div class="academics-detail">Krishna Public School, Raipur | 2021<br>(CBSE)</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rnd">
+    <h2 class="rnd-title">Research & Development Contributions</h2>
+    <div class="rnd-timeline">
+      <div class="rnd-card">
+        <div class="rnd-icon rnd-icon-paper"></div>
+        <div class="rnd-card-content">
+          <h3>Summer Research Internship</h3>
+          <div class="rnd-meta">SCOPE, VIT Chennai | May - July 2025</div>
+          <ul>
+            <li>Collaborated with faculty on a research paper focused on advanced Recommendation Systems.</li>
+            <li>Dived deep into the theoretical and practical aspects of personalized content delivery.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rnd-card">
+        <div class="rnd-icon rnd-icon-ai"></div>
+        <div class="rnd-card-content">
+          <h3>AI/ML Application</h3>
+          <div class="rnd-meta">Ongoing Learning & Application</div>
+          <ul>
+            <li>Continuously applying AI/ML principles to diverse datasets and problem statements.</li>
+            <li>Committed to exploring the cutting edge of intelligent solution development.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-project">
+    <h2 class="featured-title">Featured Project: HopeBox</h2>
+    <h3 class="featured-subtitle">Full Stack Web Application for Social Good</h3>
+    <p>HopeBox is a comprehensive web platform designed to facilitate connections between NGOs and individuals eager to donate or volunteer. Launched in April 2025, this project showcases full-stack development expertise.</p>
+    <ul>
+      <li>Developed using Node.js, HTML, CSS, JavaScript, and JSON.</li>
+      <li>Implemented robust user authentication, intuitive profile management, and a unique "celebration moments" section.</li>
+      <li>Contributed significantly to both front-end responsiveness and back-end integration for a seamless user experience.</li>
+    </ul>
+    <a href="https://github.com/Mrinal0044/HopeBox" class="featured-btn" target="_blank">View on GitHub</a>
+  </section>
+
+  <section class="featured-project">
+    <h2 class="featured-title">Featured Project: Fake news detection</h2>
+    <p>The fake news detection system is designed as a supervised classification model, where labeled data (i.e., news articles categorized as fake or real) is used to train and evaluate various machine learning and deep learning algorithms.</p>
+    <ul>
+      <li>Implemented classical ML models including Random Forest, Naive Bayes, and Logistic Regression for classifying COVID-19-related fake news.</li>
+      <li>Applied feature selection, feature extraction, PCA, and hyperparameter tuning to improve model efficiency from 85–89% to 92–95%.</li>
+      <li>Developed deep learning models such as GRU, RNN, and BiLSTM to enhance reliability, achieving up to 94% accuracy using BiLSTM</li>
+      <li>Designed and tested a hybrid model combining RNN and BiLSTM to further improve classification performance and robustness.</li>
+    </ul>
+    <a href="https://github.com/Mrinal0044/Fake_news_detection" class="featured-btn" target="_blank">View on GitHub</a>
+  </section>
+
+  <section class="featured-project">
+    <h2 class="featured-title">Featured Project: AlgoConnect</h2>
+    <p>Contributed to this project in a hackathon and Got Placed as 7th position out of all the teams</p>
+    <ul>
+      <li>Developed a contract farming website using ML and MERN stack connecting Farmers and Buyers thus eliminating middlemen.</li>
+      <li>Uses ML integration for crop recommendation system.</li>
+    </ul>
+  </section>
+
+  <section class="featured-project">
+    <h2 class="featured-title">Extra curricular activities</h2>
+    <ul>
+      <li>Part of the core committee in AVR Club, VIT Chennai</li>
+      <li>Student coordinator of a flagship event of AVR club</li>
+      <li>Hosted an event</li>
+      <li>Learnt kathak for 5 years and Won a National level and a State level Dance competition.</li>
+    </ul>
+  </section>
+
+  <section class="connect">
+    <h2 class="connect-title">Connect With Me</h2>
+    <div class="connect-links">
+      <a href="https://github.com/Mrinal0044" class="connect-btn" target="_blank">
+        <span class="icon-github"></span> GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/mrinal54b83b" class="connect-btn" target="_blank">
+        <span class="icon-linkedin"></span> LinkedIn
+      </a>
+      <a href="mailto:mrinal0821@gmail.com" class="connect-btn" target="_blank">
+        <span class="icon-email"></span> Email
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 K Mrinal. All rights reserved.</p>
+  </footer>
+</body>
+</html>
